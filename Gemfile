@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -21,6 +21,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 
+group :development, :test do 
+  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'spork', github: 'sporkrb/spork'
+  gem 'guard-spork'
+
+end
+
 group :doc do 
   gem 'sdoc', '~> 0.4.0'
 end
@@ -34,11 +42,6 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'sqlite3'
-  gem 'rspec-rails'
-end
 
 group :test do 
   gem 'selenium-webdriver'
@@ -46,7 +49,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 

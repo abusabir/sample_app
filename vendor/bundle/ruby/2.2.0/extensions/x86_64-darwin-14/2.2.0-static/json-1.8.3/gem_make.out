@@ -1,0 +1,9 @@
+/Users/oleg/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160311-88793-mfp2dc.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
